@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Acme', sans-serif;
+  margin: 0 auto;
+  justify-content: center;
+  background: linear-gradient(to bottom, whitesmoke, lightblue);
+}
+
+h1 {
+  width: fit-content;
+  margin: 0.3em auto;
+  font-size: 3.75em;
+}
+
+#start-btn {
+  display: block;
+  background-color: darkgreen;
+  font-size: 2em;
+  padding: 0.5em;
+  margin: 0.5em auto;
+  border-radius: 1em;
+}
+
+h3 {
+  font-size: 2em;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+h5 {
+  font-size: 1em;
+  margin: .5em auto;
+  width: 500px;
+}
+
+
+#grid {
+  border: solid 5px saddlebrown;
+  display: flex;
+  flex-wrap: wrap;
+  width: 250px;
+  height: 250px;
+  margin: 1em auto;
+}
+
+#grid div {
+  height: 25px;
+  width: 25px;
+}
+
+.snake {
+  background-color: olivedrab;
+}
+
+.apple {
+  background-color: red;
+  /* background-image: url(apple.jpeg); */
+
+}
