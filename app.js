@@ -24,6 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clearInterval(interval) // stop any interval that had been running
     randomApple(); //generate an apple on the board
     score = 0 // reset the score to 0
+    scoreDisplay.textContent = score
     direction = 1 //reset the direction
     currentSnake = [2,1,0] //reset the opening snake indexes
     currentSnake.forEach(sq => squares[sq].classList.add('snake'))
@@ -34,9 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
   //generate apple at random location in grid
   function randomApple() {
     squares[appleIndex].classList.remove('apple');
-    do {
-      appleIndex = Math.floor(Math.random() * squares.length)
-    } while (squares[appleIndex].classList.contains('snake'))    
+    appleIndex = Math.floor(Math.random() * squares.length)
+    if (currentSnake.includes(appleIndex)) {
+      return randomApple();
+    }   
     squares[appleIndex].classList.add('apple')
   }
 
